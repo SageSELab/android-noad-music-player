@@ -117,7 +117,7 @@ public class SplashActivity extends AppCompatActivity {
         protected Long doInBackground(String... params) {
             SongsManager songsManager = new SongsManager(SplashActivity.this);
 
-            ArrayList<HashMap<String,String>> artists = songsManager.artists();
+            ArrayList<HashMap<String, String>> artists = songsManager.artists();
             (new SharedPrefsUtils(SplashActivity.this)).writeSharedPrefs("home_artist",
                     artists.get((new Random()).nextInt(artists.size())).get("artist"));
 
